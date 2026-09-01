@@ -1,3 +1,34 @@
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" width="120"/>
+</p>
+
+<h1 align="center">Complete JavaScript Fundamentals Mastery</h1>
+
+---
+
+## Topics
+
+| #  | Topic                        | Key Points                                          |
+|----|------------------------------|-----------------------------------------------------|
+| 1  | Data Type                    | Primitive (stack) vs Reference (heap)                |
+| 2  | Variable                     | `var`, `let`, `const`, hoisting, TDZ                 |
+| 3  | Type Coercion                | Implicit vs Explicit conversion                      |
+| 4  | Template Literal             | Backticks, interpolation, multi-line                 |
+| 5  | Truthy & Falsy               | 8 falsy values, everything else truthy               |
+| 6  | Destructuring                | Array `[]`, Object `{}`, rest, default, rename       |
+| 7  | Parameters vs Arguments      | Rest `...`, default params, arguments object         |
+| 8  | Optional Chaining            | `?.` safe access, returns `undefined` not error      |
+| 9  | Equality & Comparison        | `==` (coercion) vs `===` (strict)                    |
+| 10 | Strict Mode                  | ES5, safer code, no duplicates, restricted keywords  |
+| 11 | Nullish Coalescing           | `??` operator                                        |
+| 12 | Ternary Operator             | `condition ? a : b`                                  |
+| 13 | Shadowing                    | Inner scope variable hides outer                     |
+| 14 | Short-circuit Evaluation     | `&&` and `\|\|` early exit                           |
+| 15 | Loop & Iteration             | `for`, `for...in`, `for...of`, `while`, `do...while` |
+| 16 | typeof vs instanceof         | Type checking approaches                             |
+
+---
+
 ## Data Type
 - Primitive Data Type (Immutable) — stored in stack
   - Number
@@ -79,13 +110,13 @@ Introduced in ES5. Makes code safer:
 
 ## Nullish Coalescing
 
-## Ternary Operators
+## Ternary Operator
 
 ## Shadowing
 
 ## Short-circuit Evaluation
 
-## Loop and Iteration
+## Loop & Iteration
 - For Loop
 - For In Loop
 - For Of Loop
