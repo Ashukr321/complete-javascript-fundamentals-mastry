@@ -36,21 +36,46 @@
 - Everything else is truthy (including `"0"`, `"false"`, `[]`, `{}`)
 
 ## Destructuring
-- Array
-- Object
+ES6 feature that allows extracting values from arrays or properties from objects and assigning them into variables in a concise way.
+
+- **Array Destructuring**
+  - `[]` syntax
+  - `...` rest operator — collects remaining elements
+  - `=` default value
+  - `,` skip element
+
+- **Object Destructuring**
+  - Works based on property name, not position
+  - `{}` syntax
+  - Rename while destructuring: `const { name: userName } = user`
+  - Default value support
+  - Dot notation for access
+  - Bracket notation when key has special characters: `user["my-age"]`
 
 ## Parameters vs Arguments
-- Rest Parameters
-- Default Parameters
-- Argument Object
-- Spread
+- **Parameters** — variables defined in the function
+  - Rest parameter (`...`) — takes all arguments into a single array
+  - Default parameter — allows giving a default value to parameters
+- **Arguments** — actual values passed when calling the function
 
 ## Optional Chaining
+Safely access properties — widely used with API responses. Returns `undefined` instead of throwing an error if a property is not found.
+```js
+user?.name             // property
+user?.address?.city    // nested property
+user?.sayHello?.()     // method
+users?.[0]             // array/dynamic property
+```
 
 ## Equality & Comparison
-- == vs ===
+- `==` (loose equality) — compares value, may perform type coercion if types differ
+- `===` (strict equality) — compares both value and type, no type coercion
 
 ## Strict Mode
+Introduced in ES5. Makes code safer:
+- Prevents deleting non-configurable properties
+- Disallows duplicate parameter names in functions
+- Reserved words become restricted
 
 ## Nullish Coalescing
 
