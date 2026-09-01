@@ -109,6 +109,18 @@ Introduced in ES5. Makes code safer:
 - Reserved words become restricted
 
 ## Nullish Coalescing
+`??` — provides a default/fallback value when the left-hand side is `null` or `undefined`. Unlike `||`, it does NOT fall back on other falsy values (`0`, `""`, `false`, `NaN`).
+```js
+const username = null;
+const result = username ?? "Guest";
+console.log(result); // Guest — only null/undefined trigger the fallback
+
+const count = 0;
+console.log(count ?? 10); // 0  (?? keeps it, since 0 isn't null/undefined)
+console.log(count || 10); // 10 (|| falls back, since 0 is falsy)
+```
+- `??` — checks only `null`/`undefined`
+- `||` — checks any falsy value (`0`, `""`, `false`, `null`, `undefined`, `NaN`)
 
 ## Ternary Operator
 
