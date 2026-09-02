@@ -123,16 +123,52 @@ console.log(count || 10); // 10 (|| falls back, since 0 is falsy)
 - `||` — checks any falsy value (`0`, `""`, `false`, `null`, `undefined`, `NaN`)
 
 ## Ternary Operator
+Shorthand for `if...else`. Since it takes 3 operands, it's known as the ternary operator.
+```js
+condition ? valueIfTrue : valueIfFalse
+```
+Can be chained for multiple conditions:
+```js
+marks >= 90 ? "A" : marks >= 40 ? "B" : "C"
+```
 
 ## Shadowing
+Occurs when a variable declared in an inner scope has the same name as one in an outer scope. The inner scope variable takes precedence and hides (shadows) the outer one within that scope.
+```js
+let x = 10;
+{
+  let x = 30; // shadows outer x
+  console.log(x); // 30
+}
+```
+Related concepts:
+- **Hoisting** — variable/function declarations are processed before code execution, during the memory allocation phase
+- **Scope Chain** — the chain of scopes JavaScript searches through when looking up a variable
 
 ## Short-circuit Evaluation
+JavaScript stops evaluating an expression as soon as the final result is already determined — it doesn't always evaluate the entire expression.
+- `&&` — if the left side is falsy, the right side is not evaluated
+- `||` — if the left side is truthy, the right side is not evaluated
+- `??=` (nullish coalescing) — the right side is evaluated only if the left side is `null`/`undefined`
 
 ## Loop & Iteration
-- For Loop
-- For In Loop
-- For Of Loop
-- While Loop
-- Do While Loop
+- **For Loop** — most commonly used looping mechanism, iterates using `(initialization; condition; increment/decrement)`
+  - Flow: initialize → condition → code → increment/decrement → condition → code → ...
+- **Iterable** — a value/object whose elements can be accessed one by one; implements the `Symbol.iterator` method
+- **For Of Loop** — used to iterate over the values of an iterable
+- **For In Loop** — used to iterate over an object/array and get the keys
+- **While Loop**
+- **Do While Loop**
 
 ## typeof vs instanceof
+- **typeof** — identifies the type of a value
+  ```js
+  typeof "Ashu"       // "string"
+  typeof 25           // "number"
+  typeof true         // "boolean"
+  typeof undefined    // "undefined"
+  typeof {}           // "object"
+  typeof []           // "object"
+  typeof function(){} // "function"
+  ```
+- **instanceof** — checks whether an object is an instance of a particular constructor/class; also used to check the prototype chain relationship
