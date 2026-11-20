@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-accent: var(--accent);
+}
+
+/* Links use a darker amber in light mode: JS yellow fails contrast on white. */
+:root {
+  --accent: #b45309;
+  color-scheme: light;
+}
+
+.dark {
+  --accent: #f7df1e;
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white font-sans text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100;
+}
